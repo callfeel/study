@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 변수를 선언 할 때의 규칙
+        // 1.Camel case (낙타) --> myNameWord(권장)
+        // 2.snake case(뱀) --> my_name_word
+        // 3.pascal case --> MyNameWord
+
+        // 변수는 '문자' , '$' , '_'로 시작한다(다른 특수문자 사용 할 수 없음)
+        // let 12day="월요일";(x) // 숫자로 시작하지 않음
+        // let @day12="월요일" // $,_ 외 시작 특수문자 사용 안됨
+
+        let day12="목요일"
+        let _day12="목요일"
+        let $day12="목요일"
+
+        //var,let,const 키워드로 선언한 변수들의 특징
+
+        // 1.var: 함수 레벨 스코프
+        // 함수 내에서 선언된 변수는 함수 내에서만 유효함
+        // 함수 밖에서는 그 변수를 참조할 수 없다.
+        // 함수 내에서 선언된 변수 --> 지역변수
+        // 함수 외부에서 선언된 변수 --> 전역변수
+        // 함수 --> function
+
+        var kor=90; // 전역변수
+        function getScore(){
+            console.log(kor) // 90
+        }
+        getScore()
+        console.log(kor) //90
+
+        var kor1=100;
+        function getScore(){
+            var kor1=90;
+            console.log(kor1)
+        }
+        getScore()
+        console.log(kor1)
+        
+    </script>
+</body>
+</html>
